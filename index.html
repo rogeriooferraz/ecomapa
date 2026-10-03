@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EcoMapa - encontre pontos de coleta de resíduos eletrônicos.">
+  <title>EcoMapa</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topo">
+    <a class="marca" href="#">EcoMapa</a>
+
+    <nav class="menu" aria-label="Navegação principal">
+      <a href="#mapa">Mapa</a>
+      <a href="#sobre">Sobre</a>
+    </nav>
+
+    <div class="conta">
+      <button type="button" class="botao secundario">Entrar</button>
+      <button type="button" class="botao">Criar conta</button>
+    </div>
+  </header>
+
+  <main class="layout">
+
+    <section class="principal">
+      <section class="busca-area" aria-label="Busca por tipo de resíduo">
+        <form class="busca" action="#" role="search">
+          <label for="residuo">Tipo de resíduo</label>
+          <div class="linha-busca">
+            <input
+              id="residuo"
+              name="residuo"
+              type="search"
+              placeholder="Ex.: geladeira, celular, notebook ou pilha"
+            >
+            <button type="submit" class="botao">Buscar pontos</button>
+          </div>
+        </form>
+        <p class="ajuda-busca">
+          Digite o item que deseja descartar. O mapa mostrará os pontos mais relevantes próximos a você.
+        </p>
+      </section>
+
+      <section id="mapa" class="mapa" aria-label="Mapa dos pontos de coleta">
+        <div class="mapa-placeholder">
+          <strong>Pontos de coleta próximos</strong>
+          <span>Resultados próximos à sua localização.</span>
+
+          <div class="pino pino-a" aria-hidden="true">●</div>
+          <div class="pino pino-b" aria-hidden="true">●</div>
+          <div class="pino pino-c" aria-hidden="true">●</div>
+        </div>
+      </section>
+
+      <section class="resultados">
+        <div class="titulo-secao">
+          <div>
+            <p class="destaque">Pontos próximos</p>
+            <h2>Locais encontrados</h2>
+          </div>
+          <span class="texto-apoio">3 pontos</span>
+        </div>
+
+        <div class="lista-pontos">
+          <article class="cartao">
+            <h3>EcoPonto Centro</h3>
+            <p>Centro, Diadema - SP</p>
+            <p class="texto-apoio">Recebe eletrônicos, pilhas e baterias.</p>
+            <button type="button" class="botao-link">Ver detalhes</button>
+          </article>
+
+          <article class="cartao">
+            <h3>Coleta Verde</h3>
+            <p>Vila Nogueira, Diadema - SP</p>
+            <p class="texto-apoio">Recebe eletrodomésticos. Especialidade: geladeiras.</p>
+            <button type="button" class="botao-link">Ver detalhes</button>
+          </article>
+
+          <article class="cartao">
+            <h3>Ponto Sustentável</h3>
+            <p>Centro, São Bernardo do Campo - SP</p>
+            <p class="texto-apoio">Recebe lâmpadas, pilhas e pequenos eletrônicos.</p>
+            <button type="button" class="botao-link">Ver detalhes</button>
+          </article>
+        </div>
+      </section>
+
+      <section id="sobre" class="sobre">
+        <h2>Sobre o EcoMapa</h2>
+        <p>
+          O EcoMapa reúne informações sobre pontos de coleta de resíduos
+          eletrônicos para facilitar o descarte correto e aproximar a população
+          de coletores públicos e privados.
+        </p>
+        <a class="botao secundario link-acao" href="cadastro-coletor.html">Cadastrar ponto de coleta</a>
+      </section>
+    <aside class="barra-lateral" aria-label="Categorias e filtros">
+      <section>
+        <h2>Categorias</h2>
+        <p class="texto-apoio">Disponíveis conforme os pontos de coleta cadastrados.</p>
+
+        <div class="lista-opcoes">
+          <label><input type="checkbox"> 🔋 Pilhas e baterias</label>
+          <label><input type="checkbox"> 💡 Lâmpadas</label>
+          <label><input type="checkbox"> 📱 Eletrônicos</label>
+          <label><input type="checkbox"> 🔌 Eletrodomésticos</label>
+        </div>
+      </section>
+
+      <section>
+        <h2>Filtros</h2>
+
+        <fieldset>
+          <legend>Tipo de ponto</legend>
+          <label><input type="checkbox"> Público</label>
+          <label><input type="checkbox"> Privado</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Serviços</legend>
+          <label><input type="checkbox"> Descarte gratuito</label>
+          <label><input type="checkbox"> Pagamento pelo resíduo</label>
+          <label><input type="checkbox"> Coleta agendada</label>
+        </fieldset>
+
+        <button type="button" class="botao largura-total">Aplicar filtros</button>
+        <button type="button" class="botao-link largura-total">Limpar filtros</button>
+      </section>
+    </aside>
+    </section>
+  </main>
+
+  <footer>
+    <span>EcoMapa</span>
+    <span>Encontre o destino certo para seus resíduos eletrônicos.</span>
+  </footer>
+</body>
+</html>
