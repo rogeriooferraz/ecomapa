@@ -82,3 +82,21 @@ navegação.
 
 - `styles.css` — estilos compartilhados entre as telas;
 - `cadastro.css` — estilos específicos da tela de cadastro de pontos de coleta.
+
+## Estrutura do projeto
+
+```text
+ecomapa/
+├── index.html
+├── cadastro.html
+├── .nojekyll
+└── css/
+    ├── style.css
+    └── cadastro.css
+```
+
+O GitHub documenta .nojekyll como forma de evitar o processamento Jekyll
+quando queremos servir diretamente os arquivos estáticos.
+
+As pastas `js/` e `images/` também serão reservadas, para recursos a serem
+adicionados nas próximas etapas do projeto.
