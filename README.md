@@ -80,8 +80,9 @@ navegação.
 
 ## Arquivos de estilo
 
-- `styles.css` — estilos compartilhados entre as telas;
-- `cadastro.css` — estilos específicos da tela de cadastro de pontos de coleta.
+As duas páginas usam o CSS minificado do Bootstrap 5.3.8 via CDN. O arquivo
+`css/style.css` contém os estilos próprios do mapa ilustrativo, e
+`css/watermark.css` contém a marca d'água temporária.
 
 ## Estrutura do projeto
 
@@ -91,8 +92,8 @@ ecomapa/
 ├── CONTRIBUTING.md
 ├── CONTRIBUTORS.md
 ├── css
-│   ├── cadastro.css
-│   └── style.css
+│   ├── style.css
+│   └── watermark.css
 ├── favicon.ico
 ├── favicon.svg
 ├── images
@@ -103,7 +104,6 @@ ecomapa/
 │       ├── pwa-512x512.png
 │       └── pwa-maskable-512x512.png
 ├── index.html
-├── js
 ├── README.md
 └── site.webmanifest
 
@@ -112,5 +112,5 @@ ecomapa/
 O GitHub documenta .nojekyll como forma de evitar o processamento Jekyll
 quando queremos servir diretamente os arquivos estáticos.
 
-As pastas `js/` e `images/` também estão reservadas, para recursos a serem
-adicionados nas próximas etapas do projeto.
+A pasta `images/` também está reservada para recursos a serem adicionados nas
+próximas etapas do projeto.

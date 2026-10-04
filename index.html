@@ -12,135 +12,134 @@
   <meta name="theme-color" content="#062f43">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="EcoMapa">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/watermark.css">
 </head>
-<body>
-  <header class="topo">
-    <a class="marca" href="#">EcoMapa</a>
+<body class="bg-light">
+  <header class="container d-flex flex-wrap align-items-center gap-3 py-3">
+    <a class="fs-4 fw-bold text-success text-decoration-none me-auto" href="#">EcoMapa</a>
 
-    <nav class="menu" aria-label="Navegação principal">
-      <a href="#mapa">Mapa</a>
-      <a href="#sobre">Sobre</a>
+    <nav class="d-none d-md-flex gap-3" aria-label="Navegação principal">
+      <a class="link-body-emphasis text-decoration-none" href="#mapa">Mapa</a>
+      <a class="link-body-emphasis text-decoration-none" href="#sobre">Sobre</a>
     </nav>
 
-    <div class="conta">
-      <button type="button" class="botao secundario">Entrar</button>
-      <button type="button" class="botao">Criar conta</button>
+    <div class="d-flex gap-2 w-100 account-actions">
+      <button type="button" class="btn btn-outline-success flex-fill">Entrar</button>
+      <button type="button" class="btn btn-success flex-fill">Criar conta</button>
     </div>
   </header>
 
-  <main class="layout">
+  <main class="container pb-4">
+    <div class="row g-4">
+      <div class="col-12 col-lg-9">
+        <section aria-label="Busca por tipo de descarte">
+          <form action="#" role="search">
+            <label class="form-label fw-semibold" for="residuo">Tipo de descarte</label>
+            <div class="d-flex flex-column flex-md-row gap-2">
+              <input class="form-control" id="residuo" name="residuo" type="search" placeholder="Ex.: geladeira, celular, notebook ou pilha">
+              <button type="submit" class="btn btn-success">Buscar</button>
+            </div>
+          </form>
+          <p class="small text-secondary mt-2 mb-3">
+            Digite o item que deseja descartar. O mapa mostrará os pontos mais relevantes próximos a você.
+          </p>
+        </section>
 
-    <section class="principal">
-      <section class="busca-area" aria-label="Busca por tipo de descarte">
-        <form class="busca" action="#" role="search">
-          <label for="residuo">Tipo de descarte</label>
-          <div class="linha-busca">
-            <input
-              id="residuo"
-              name="residuo"
-              type="search"
-              placeholder="Ex.: geladeira, celular, notebook ou pilha"
-            >
-            <button type="submit" class="botao">Buscar</button>
+        <section id="mapa" aria-label="Mapa dos pontos de coleta">
+          <div class="mapa-placeholder position-relative d-flex flex-column justify-content-center align-items-center overflow-hidden rounded-3 border bg-success-subtle p-3 text-center">
+            <strong>Pontos de coleta próximos</strong>
+            <span class="text-secondary">Resultados próximos à sua localização.</span>
+            <span class="pino pino-a" aria-hidden="true">●</span>
+            <span class="pino pino-b" aria-hidden="true">●</span>
+            <span class="pino pino-c" aria-hidden="true">●</span>
           </div>
-        </form>
-        <p class="ajuda-busca">
-          Digite o item que deseja descartar. O mapa mostrará os pontos mais relevantes próximos a você.
-        </p>
-      </section>
+        </section>
 
-      <section id="mapa" class="mapa" aria-label="Mapa dos pontos de coleta">
-        <div class="mapa-placeholder">
-          <strong>Pontos de coleta próximos</strong>
-          <span>Resultados próximos à sua localização.</span>
-
-          <div class="pino pino-a" aria-hidden="true">●</div>
-          <div class="pino pino-b" aria-hidden="true">●</div>
-          <div class="pino pino-c" aria-hidden="true">●</div>
-        </div>
-      </section>
-
-      <section class="resultados">
-        <div class="titulo-secao">
-          <div>
-            <p class="destaque">Pontos próximos</p>
-            <h2>Locais encontrados</h2>
+        <section class="mt-4">
+          <div class="d-flex justify-content-between align-items-center gap-2 mb-3">
+            <div>
+              <p class="text-success fw-bold mb-1">Pontos próximos</p>
+              <h2 class="h4 mb-0">Locais encontrados</h2>
+            </div>
+            <span class="text-secondary">3 pontos</span>
           </div>
-          <span class="texto-apoio">3 pontos</span>
-        </div>
 
-        <div class="lista-pontos">
-          <article class="cartao">
-            <h3>EcoPonto Centro</h3>
-            <p>Centro, Diadema - SP</p>
-            <p class="texto-apoio">Recebe eletrônicos, pilhas e baterias.</p>
-            <button type="button" class="botao-link">Ver detalhes</button>
-          </article>
+          <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3">
+            <div class="col">
+              <article class="card h-100"><div class="card-body">
+                <h3 class="h5 card-title">EcoPonto Centro</h3>
+                <p class="card-text">Centro, Diadema - SP</p>
+                <p class="card-text text-secondary">Recebe eletrônicos, pilhas e baterias.</p>
+                <button type="button" class="btn btn-link link-success px-0">Ver detalhes</button>
+              </div></article>
+            </div>
+            <div class="col">
+              <article class="card h-100"><div class="card-body">
+                <h3 class="h5 card-title">Coleta Verde</h3>
+                <p class="card-text">Vila Nogueira, Diadema - SP</p>
+                <p class="card-text text-secondary">Recebe eletrodomésticos. Especialidade: geladeiras.</p>
+                <button type="button" class="btn btn-link link-success px-0">Ver detalhes</button>
+              </div></article>
+            </div>
+            <div class="col">
+              <article class="card h-100"><div class="card-body">
+                <h3 class="h5 card-title">Ponto Sustentável</h3>
+                <p class="card-text">Centro, São Bernardo do Campo - SP</p>
+                <p class="card-text text-secondary">Recebe lâmpadas, pilhas e pequenos eletrônicos.</p>
+                <button type="button" class="btn btn-link link-success px-0">Ver detalhes</button>
+              </div></article>
+            </div>
+          </div>
+        </section>
 
-          <article class="cartao">
-            <h3>Coleta Verde</h3>
-            <p>Vila Nogueira, Diadema - SP</p>
-            <p class="texto-apoio">Recebe eletrodomésticos. Especialidade: geladeiras.</p>
-            <button type="button" class="botao-link">Ver detalhes</button>
-          </article>
+        <section id="sobre" class="card mt-4"><div class="card-body">
+          <h2 class="h4">Sobre o EcoMapa</h2>
+          <p>
+            O EcoMapa reúne informações sobre pontos de coleta de resíduos
+            eletrônicos para facilitar o descarte correto e aproximar a população
+            de coletores públicos e privados.
+          </p>
+          <a class="btn btn-outline-success" href="cadastro.html">Cadastrar ponto de coleta</a>
+        </div></section>
+      </div>
 
-          <article class="cartao">
-            <h3>Ponto Sustentável</h3>
-            <p>Centro, São Bernardo do Campo - SP</p>
-            <p class="texto-apoio">Recebe lâmpadas, pilhas e pequenos eletrônicos.</p>
-            <button type="button" class="botao-link">Ver detalhes</button>
-          </article>
-        </div>
-      </section>
+      <aside class="col-12 col-lg-3 order-lg-first" aria-label="Categorias e filtros">
+        <div class="card"><div class="card-body">
+          <section>
+            <h2 class="h5">Categorias</h2>
+            <p class="text-secondary">Disponíveis conforme os pontos de coleta cadastrados.</p>
+            <div class="d-grid gap-2">
+              <label class="form-check"><input class="form-check-input" type="checkbox"> 🔋 Pilhas e baterias</label>
+              <label class="form-check"><input class="form-check-input" type="checkbox"> 💡 Lâmpadas</label>
+              <label class="form-check"><input class="form-check-input" type="checkbox"> 📱 Eletrônicos</label>
+              <label class="form-check"><input class="form-check-input" type="checkbox"> 🔌 Eletrodomésticos</label>
+            </div>
+          </section>
 
-      <section id="sobre" class="sobre">
-        <h2>Sobre o EcoMapa</h2>
-        <p>
-          O EcoMapa reúne informações sobre pontos de coleta de resíduos
-          eletrônicos para facilitar o descarte correto e aproximar a população
-          de coletores públicos e privados.
-        </p>
-        <a class="botao secundario link-acao" href="cadastro.html">Cadastrar ponto de coleta</a>
-      </section>
-    <aside class="barra-lateral" aria-label="Categorias e filtros">
-      <section>
-        <h2>Categorias</h2>
-        <p class="texto-apoio">Disponíveis conforme os pontos de coleta cadastrados.</p>
-
-        <div class="lista-opcoes">
-          <label><input type="checkbox"> 🔋 Pilhas e baterias</label>
-          <label><input type="checkbox"> 💡 Lâmpadas</label>
-          <label><input type="checkbox"> 📱 Eletrônicos</label>
-          <label><input type="checkbox"> 🔌 Eletrodomésticos</label>
-        </div>
-      </section>
-
-      <section>
-        <h2>Filtros</h2>
-
-        <fieldset>
-          <legend>Tipo de ponto</legend>
-          <label><input type="checkbox"> Público</label>
-          <label><input type="checkbox"> Privado</label>
-        </fieldset>
-
-        <fieldset>
-          <legend>Serviços</legend>
-          <label><input type="checkbox"> Descarte gratuito</label>
-          <label><input type="checkbox"> Pagamento pelo resíduo</label>
-          <label><input type="checkbox"> Coleta agendada</label>
-        </fieldset>
-
-        <button type="button" class="botao largura-total">Aplicar filtros</button>
-        <button type="button" class="botao-link largura-total">Limpar filtros</button>
-      </section>
-    </aside>
-    </section>
+          <section class="mt-4">
+            <h2 class="h5">Filtros</h2>
+            <fieldset class="mb-3">
+              <legend class="fs-6 fw-semibold">Tipo de ponto</legend>
+              <label class="form-check"><input class="form-check-input" type="checkbox"> Público</label>
+              <label class="form-check"><input class="form-check-input" type="checkbox"> Privado</label>
+            </fieldset>
+            <fieldset class="mb-3">
+              <legend class="fs-6 fw-semibold">Serviços</legend>
+              <label class="form-check"><input class="form-check-input" type="checkbox"> Descarte gratuito</label>
+              <label class="form-check"><input class="form-check-input" type="checkbox"> Pagamento pelo resíduo</label>
+              <label class="form-check"><input class="form-check-input" type="checkbox"> Coleta agendada</label>
+            </fieldset>
+            <button type="button" class="btn btn-success w-100">Aplicar filtros</button>
+            <button type="button" class="btn btn-link link-success w-100">Limpar filtros</button>
+          </section>
+        </div></div>
+      </aside>
+    </div>
   </main>
 
-  <footer>
+  <footer class="container d-flex flex-column flex-md-row justify-content-between gap-2 py-4 small text-secondary">
     <span>EcoMapa</span>
     <span>Encontre o destino certo para seus resíduos eletrônicos.</span>
   </footer>

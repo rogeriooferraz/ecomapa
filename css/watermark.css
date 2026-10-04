@@ -1,44 +1,15 @@
-/*
- * EcoMapa
- * Marca d'água temporária para indicar que o site está em desenvolvimento.
- */
-
+/* Temporary watermark while the site is in development. */
 .mapa-placeholder::after {
   content: "Site em construção";
-
   position: absolute;
   top: 50%;
   left: 50%;
-
   transform: translate(-50%, -50%) rotate(-35deg);
-
+  color: rgba(25, 135, 84, .3);
   font-size: clamp(1.5rem, 4vw, 3.75rem);
   font-weight: 700;
-  letter-spacing: 0.08em;
-  line-height: 1.2;
+  letter-spacing: .08em;
   text-transform: uppercase;
   white-space: nowrap;
-
-  color: rgba(25, 135, 84, 0.3);
-
   pointer-events: none;
-  user-select: none;
-
-  z-index: 0;
-}
-
-.mapa-placeholder > strong,
-.mapa-placeholder > span {
-  position: relative;
-  z-index: 1;
-}
-
-.mapa-placeholder > .pino {
-  z-index: 1;
-}
-
-@media (max-width: 699px) {
-  .mapa-placeholder::after {
-    transform: translate(-50%, -50%) rotate(-50deg);
-  }
 }
