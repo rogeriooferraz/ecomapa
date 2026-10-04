@@ -36,18 +36,11 @@ O escopo poderá ser ajustado conforme a evolução do projeto.
 ## Colaboração
 
 As orientações para participação no projeto estão em
-[`CONTRIBUTING.md`](CONTRIBUTING.md).
+[`docs/CONTRIBUTING.md`](docs/CONTRIBUTING.md).
 
 Cada integrante pode registrar sua participação em
-[`CONTRIBUTORS.md`](CONTRIBUTORS.md), informando apenas dados adequados para
-publicação no repositório.
-
-## Documentos do projeto
-
-- [`CONTRIBUTING.md`](CONTRIBUTING.md) — orientações para colaboração;
-- [`CONTRIBUTORS.md`](CONTRIBUTORS.md) — registro dos integrantes e suas áreas
-  de atuação.
-
+[`docs/CONTRIBUTORS.md`](docs/CONTRIBUTORS.md), informando apenas dados
+adequados para publicação no repositório.
 
 ## Interface
 
@@ -77,40 +70,52 @@ apresentados depois da área principal. Em telas maiores, essas opções passam
 para uma barra lateral à esquerda, mantendo o mapa como elemento central da
 navegação.
 
-
 ## Arquivos de estilo
 
 As duas páginas usam o CSS minificado do Bootstrap 5.3.8 via CDN. O arquivo
-`css/style.css` contém os estilos próprios do mapa ilustrativo, e
-`css/watermark.css` contém a marca d'água temporária.
+`frontend/css/style.css` contém os estilos próprios do mapa ilustrativo, e
+`frontend/css/watermark.css` contém a marca d'água temporária.
 
 ## Estrutura do projeto
 
 ```text
 ecomapa/
-├── cadastro.html
-├── CONTRIBUTING.md
-├── CONTRIBUTORS.md
-├── css
-│   ├── style.css
-│   └── watermark.css
-├── favicon.ico
-├── favicon.svg
-├── images
-│   └── icons
-│       ├── apple-touch-icon.png
-│       ├── icon-master-1024x1024.png
-│       ├── pwa-192x192.png
-│       ├── pwa-512x512.png
-│       └── pwa-maskable-512x512.png
-├── index.html
-├── README.md
-└── site.webmanifest
-
+├── .github/
+├── .gitignore
+├── docs/
+│   ├── CONTRIBUTING.md
+│   └── CONTRIBUTORS.md
+├── frontend/
+│   ├── .nojekyll
+│   ├── cadastro.html
+│   ├── css/
+│   ├── favicon.ico
+│   ├── favicon.svg
+│   ├── images/
+│   ├── index.html
+│   ├── js/
+│   └── site.webmanifest
+└── README.md
 ```
 
-O GitHub documenta .nojekyll como forma de evitar o processamento Jekyll
-quando queremos servir diretamente os arquivos estáticos.
+`frontend/` é a raiz do site publicado. Os caminhos entre páginas, estilos e
+ícones são relativos a essa pasta. `docs/` reúne a documentação do projeto;
+`.gitignore` e `README.md` permanecem na raiz. `frontend/js/` está reservado
+para scripts futuros e contém `.gitkeep` para que o Git registre a pasta.
 
-A pasta `images/` também está reservada para recursos a serem adicionados nas
-próximas etapas do projeto.
+## Visualização local
+
+Na raiz do repositório, execute:
+
+```sh
+python3 -m http.server 8000 --directory frontend
+```
+
+Depois, abra `http://localhost:8000/`. Não é necessário instalar dependências
+para visualizar as páginas; o Bootstrap é carregado por CDN.
+
+## Publicação
+
+O workflow `.github/workflows/pages.yml` publica o conteúdo de `frontend/` no
+GitHub Pages quando há alterações na branch `main`. O domínio `ecomapa.app` está
+configurado nas opções do GitHub Pages.
