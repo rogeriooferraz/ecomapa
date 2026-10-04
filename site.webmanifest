@@ -1,0 +1,30 @@
+{
+  "name": "EcoMapa",
+  "short_name": "EcoMapa",
+  "description": "Mapa de pontos de coleta de resíduos eletrônicos.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#062f43",
+  "theme_color": "#062f43",
+  "icons": [
+    {
+      "src": "images/icons/pwa-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "images/icons/pwa-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "images/icons/pwa-maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

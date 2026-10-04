@@ -87,16 +87,30 @@ navegação.
 
 ```text
 ecomapa/
-├── index.html
 ├── cadastro.html
-├── .nojekyll
-└── css/
-    ├── style.css
-    └── cadastro.css
+├── CONTRIBUTING.md
+├── CONTRIBUTORS.md
+├── css
+│   ├── cadastro.css
+│   └── style.css
+├── favicon.ico
+├── favicon.svg
+├── images
+│   └── icons
+│       ├── apple-touch-icon.png
+│       ├── icon-master-1024x1024.png
+│       ├── pwa-192x192.png
+│       ├── pwa-512x512.png
+│       └── pwa-maskable-512x512.png
+├── index.html
+├── js
+├── README.md
+└── site.webmanifest
+
 ```
 
 O GitHub documenta .nojekyll como forma de evitar o processamento Jekyll
 quando queremos servir diretamente os arquivos estáticos.
 
-As pastas `js/` e `images/` também serão reservadas, para recursos a serem
+As pastas `js/` e `images/` também estão reservadas, para recursos a serem
 adicionados nas próximas etapas do projeto.
