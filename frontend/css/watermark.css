@@ -1,5 +1,6 @@
 /* Temporary watermark while the site is in development. */
-.mapa-frame::after {
+.mapa-frame::after,
+.cadastro-page::after {
   content: "Site em construção";
   position: absolute;
   top: 50%;
@@ -12,4 +13,9 @@
   text-transform: uppercase;
   white-space: nowrap;
   pointer-events: none;
+}
+
+.cadastro-page::after {
+  position: fixed;
+  z-index: 1;
 }

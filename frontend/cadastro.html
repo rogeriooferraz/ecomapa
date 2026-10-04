@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Cadastro de ponto de coleta no EcoMapa.">
-  <title>Cadastrar ponto de coleta - EcoMapa</title>
+  <title>Cadastro de coletor - EcoMapa</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/watermark.css">
 </head>
-<body class="bg-light">
+<body class="cadastro-page bg-light">
   <header class="container d-flex align-items-center justify-content-between gap-3 py-3">
     <a class="fs-4 fw-bold text-success text-decoration-none" href="index.html">EcoMapa</a>
     <a class="btn btn-outline-success" href="index.html">Voltar ao mapa</a>
@@ -17,7 +18,7 @@
   <main class="container py-4 pb-5" style="max-width: 900px">
     <section class="mb-4">
       <p class="text-success fw-bold mb-1">Ponto de coleta</p>
-      <h1>Cadastrar coletor</h1>
+      <h1>Cadastro de coletor</h1>
       <p class="text-secondary">Muito obrigado por fazer parte do EcoMapa.</p>
       <p class="text-secondary">
         Informe os dados básicos do local e os tipos de resíduos recebidos.
@@ -61,7 +62,7 @@
         </div>
         <div class="col-12 d-grid d-sm-flex justify-content-sm-end gap-2">
           <a class="btn btn-outline-success" href="index.html">Cancelar</a>
-          <button type="button" class="btn btn-success">Enviar cadastro</button>
+          <button type="button" class="btn btn-secondary" disabled>Enviar cadastro</button>
         </div>
       </div>
     </form>
