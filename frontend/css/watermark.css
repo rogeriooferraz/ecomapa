@@ -1,5 +1,5 @@
 /* Temporary watermark while the site is in development. */
-.mapa-placeholder::after {
+.mapa-frame::after {
   content: "Site em construção";
   position: absolute;
   top: 50%;

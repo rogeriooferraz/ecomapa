@@ -1,20 +1,10 @@
-/* Styles specific to the placeholder map. */
-.mapa-placeholder { min-height: 52vh; }
-
-.pino {
-  position: absolute;
-  color: var(--bs-success);
-  font-size: 2rem;
+.mapa-frame iframe {
+  display: block;
+  width: 100%;
+  height: clamp(560px, 75vh, 760px);
+  border: 0;
 }
-
-.pino-a { top: 22%; left: 28%; }
-.pino-b { top: 55%; left: 62%; }
-.pino-c { top: 35%; left: 78%; }
 
 @media (min-width: 768px) {
   .account-actions { width: auto !important; }
-}
-
-@media (min-width: 992px) {
-  .mapa-placeholder { min-height: 560px; }
 }

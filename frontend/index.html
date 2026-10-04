@@ -38,7 +38,7 @@
           <form action="#" role="search">
             <label class="form-label fw-semibold" for="residuo">Tipo de descarte</label>
             <div class="d-flex flex-column flex-md-row gap-2">
-              <input class="form-control" id="residuo" name="residuo" type="search" placeholder="Ex.: geladeira, celular, notebook ou pilha">
+              <input class="form-control" id="residuo" name="residuo" type="search" placeholder="Ex.: geladeira, celular, pilhas, ...">
               <button type="submit" class="btn btn-success">Buscar</button>
             </div>
           </form>
@@ -48,12 +48,14 @@
         </section>
 
         <section id="mapa" aria-label="Mapa dos pontos de coleta">
-          <div class="mapa-placeholder position-relative d-flex flex-column justify-content-center align-items-center overflow-hidden rounded-3 border bg-success-subtle p-3 text-center">
-            <strong>Pontos de coleta próximos</strong>
-            <span class="text-secondary">Resultados próximos à sua localização.</span>
-            <span class="pino pino-a" aria-hidden="true">●</span>
-            <span class="pino pino-b" aria-hidden="true">●</span>
-            <span class="pino pino-c" aria-hidden="true">●</span>
+          <div class="mapa-frame position-relative overflow-hidden rounded-3 border">
+            <iframe
+              title="Mapa de Diadema, São Paulo"
+              src="https://www.google.com/maps?q=Diadema%2C%20SP%2C%20Brazil&amp;output=embed"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
           </div>
         </section>
 
